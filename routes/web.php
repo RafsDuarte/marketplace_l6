@@ -23,4 +23,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::get('/model', function(){
+             
+    return \App\Models\User::all();
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
