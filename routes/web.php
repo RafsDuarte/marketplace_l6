@@ -25,8 +25,12 @@ Auth::routes();
 
 
 Route::get('/model', function(){
+
+    $user = \App\Models\User::find(4);
+
+    dd($user->store()->count());
              
-    return \App\Models\User::all();
+    // return \App\Models\User::all();
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
