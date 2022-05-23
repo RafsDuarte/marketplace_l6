@@ -26,11 +26,19 @@ Auth::routes();
 
 Route::get('/model', function(){
 
-    $user = \App\Models\User::find(4);
+    \App\Models\Category::create([
+            'name' => 'Notebook Gamer',
+            'description' => 'Notebooks gamers de varíos valores',
+            'slug' => 'notebook-gamer'
+]);
 
-    dd($user->store()->count());
-             
-    // return \App\Models\User::all();
+    \App\Models\Category::create([
+        'name' => 'Jogos',
+        'description' => 'Jogos de varíos valores',
+        'slug' => 'jogos'
+]);
+
+        return \App\Models\Category::all();
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
