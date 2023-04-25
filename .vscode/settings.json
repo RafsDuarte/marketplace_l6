@@ -1,0 +1,11 @@
+{
+    "git.terminalAuthentication": true,
+    "github.gitAuthentication": true,
+
+    "emmet.triggerExpansionOnTab": true,
+    "blade.format.enable": true,
+    "[blade]": {
+    "editor.autoClosingBrackets": "always"
+},
+
+}
