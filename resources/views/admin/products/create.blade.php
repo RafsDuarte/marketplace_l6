@@ -55,7 +55,7 @@
             <label>Categorias</label>
             <select name="categories[]" id="categories" class="form-control @error('categories') is-invalid @enderror" multiple>
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" @if (in_array($category->id, old('categories', []))) selected @endif>
+                    <option value="{{ $category->id }}">
                         {{ $category->name }}
                     </option>
                 @endforeach
